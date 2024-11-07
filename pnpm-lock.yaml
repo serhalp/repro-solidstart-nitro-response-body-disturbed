@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  nitropack: npm:nitropack-nightly@latest
-
 importers:
 
   .:
@@ -1526,9 +1523,6 @@ packages:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  h3-nightly@1.13.1-20241013-011028-3bf8af0:
-    resolution: {integrity: sha512-4kygQHpL1MqsabGd2IRpZ1nGUWw6xXpNq4u6ier2ydZr/Hs6/oQlR5fm9WNIhBYaO5sS5ati+UVwsFg+q5JFeg==}
-
   h3@1.11.1:
     resolution: {integrity: sha512-AbaH6IDnZN6nmbnJOH72y3c5Wwh9P97soSVdGSBbcDACRdkC0FEWf25pzx4f/NuOCK6quHmW18yF2Wx+G4Zi1A==}
 
@@ -1857,8 +1851,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nitropack-nightly@2.10.3-20241105-190013.cf497593:
-    resolution: {integrity: sha512-wkd+30lqw76LkTW0MKJEK7WEhiWScnDzWgxn/fYA9i82RTlWUw6WLElCJnM4FQsBCWaXy+Plt9Nr5eKZbNOEVQ==}
+  nitropack@2.10.3:
+    resolution: {integrity: sha512-7n+ITF7RbCMwZZzyacxJ9eMCnWuE60omGJEyLM5PQRKS4Vu5w6OOCvf4C6E3UC0UryFuUIwGbJ3M+tIP9Az9OQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -3946,19 +3940,6 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
-  h3-nightly@1.13.1-20241013-011028-3bf8af0:
-    dependencies:
-      cookie-es: 1.2.2
-      crossws: 0.3.1
-      defu: 6.1.4
-      destr: 2.0.3
-      iron-webcrypto: 1.2.1
-      ohash: 1.1.4
-      radix3: 1.1.2
-      ufo: 1.5.4
-      uncrypto: 0.1.3
-      unenv: 1.10.0
-
   h3@1.11.1:
     dependencies:
       cookie-es: 1.2.2
@@ -3977,7 +3958,7 @@ snapshots:
   h3@1.13.0:
     dependencies:
       cookie-es: 1.2.2
-      crossws: 0.2.4
+      crossws: 0.3.1
       defu: 6.1.4
       destr: 2.0.3
       iron-webcrypto: 1.2.1
@@ -3986,8 +3967,6 @@ snapshots:
       ufo: 1.5.4
       uncrypto: 0.1.3
       unenv: 1.10.0
-    transitivePeerDependencies:
-      - uWebSockets.js
 
   has-unicode@2.0.1: {}
 
@@ -4169,7 +4148,7 @@ snapshots:
       citty: 0.1.6
       clipboardy: 4.0.0
       consola: 3.2.3
-      crossws: 0.2.4
+      crossws: 0.3.1
       defu: 6.1.4
       get-port-please: 3.1.2
       h3: 1.13.0
@@ -4182,8 +4161,6 @@ snapshots:
       ufo: 1.5.4
       untun: 0.1.3
       uqr: 0.1.2
-    transitivePeerDependencies:
-      - uWebSockets.js
 
   local-pkg@0.5.0:
     dependencies:
@@ -4287,7 +4264,7 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  nitropack-nightly@2.10.3-20241105-190013.cf497593(typescript@5.6.3):
+  nitropack@2.10.3(typescript@5.6.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -4321,7 +4298,7 @@ snapshots:
       fs-extra: 11.2.0
       globby: 14.0.2
       gzip-size: 7.0.0
-      h3: h3-nightly@1.13.1-20241013-011028-3bf8af0
+      h3: 1.13.0
       hookable: 5.5.3
       httpxy: 0.1.5
       ioredis: 5.4.1
@@ -4378,7 +4355,6 @@ snapshots:
       - mysql2
       - supports-color
       - typescript
-      - uWebSockets.js
       - webpack-sources
 
   node-addon-api@7.1.1: {}
@@ -4924,8 +4900,6 @@ snapshots:
       ufo: 1.5.4
     optionalDependencies:
       ioredis: 5.4.1
-    transitivePeerDependencies:
-      - uWebSockets.js
 
   untun@0.1.3:
     dependencies:
@@ -4994,7 +4968,7 @@ snapshots:
       hookable: 5.5.3
       http-proxy: 1.18.1
       micromatch: 4.0.8
-      nitropack: nitropack-nightly@2.10.3-20241105-190013.cf497593(typescript@5.6.3)
+      nitropack: 2.10.3(typescript@5.6.3)
       node-fetch-native: 1.6.4
       path-to-regexp: 6.3.0
       pathe: 1.1.2
